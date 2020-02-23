@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-basis 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 550px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      /* 
+        flex 缩写属性
+      */
+      .red {
+        background-color: #f00;
+        /* 一个值 */
+        /* 没单位 是 flex-grow */
+        /* flex: 1; */
+        /* 有值 是 flex-basis */
+        /* flex: 200px; */
+        /* 
+          两个值 必须是
+          一个没单位  flex-shrink
+          一个是有效的宽度值 flex-sis
+        */
+        /* flex: 1 200px; */
+        /*
+          三个值 
+          第一个无单位 flex-grow
+          第二个无单位 flex-shrink
+          第三个有单位 flex-basis
+         */
+        flex: 1 2 200px;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red 1</div>
+      <div class="item green">green 2</div>
+      <div class="item blue">blue 3</div>
+    </div>
+  </body>
+</html>

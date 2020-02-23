@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-flow 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 550px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        /*
+        flex-flow
+        是 flex-direction || flex-wrap 的简写
+        可以省略，顺序任意
+        */
+        flex-flow: row-reverse wrap;
+        justify-content: space-evenly;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+      <div class="item"</div>
+    </div>
+  </body>
+</html>

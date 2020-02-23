@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-wrap 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 500px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        /*
+        flex-wrap
+        默认情况下，所有的 flex items 都会在同一行显示
+        决定了 flex container 是单行还是多行
+        nowrap(默认)：单行
+        wrap：多行
+        wrap-reverse：多行（对比 wrap，cross start 和 cross end 相反） 这个用的比较少
+        */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap-reverse; */
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+    </div>
+  </body>
+</html>

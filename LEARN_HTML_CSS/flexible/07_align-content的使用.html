@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-content 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 550px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        /*
+        align-content 决定了 多行 flex items 在 cross axis 上的对齐方式，用法与justify-content 相同 
+        - stretch(默认值)：与 align-items 的 stretch 类似 -
+          flex-start：与 cross start 对齐
+        - flex-end： 与 cross end 对齐 
+        - center：居中对齐 
+        - space-between 
+          flex items 之间的距离相等 与 cross start、cross end 两端对齐 
+        - space-evenly: 
+          flex items 之间的距离相等 flex items 与 cross start、cross end 之间的距离 等于 flex items 之间的距离 
+        - space-around: 
+          flex items 之间的距离相等 flex items 与 cross start、cross end 之间的距离 是 flex
+          items 之间距离的一半
+        */
+        align-content: stretch;
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        align-content: space-around;
+        /* align-content: space-between; */
+        /* align-content: space-evenly; */
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red 1</div>
+      <div class="item green">green 2</div>
+      <div class="item blue">blue 3</div>
+      <div class="item red">red 4</div>
+      <div class="item green">green 5</div>
+      <div class="item blue">blue 6</div>
+      <div class="item red">red 7</div>
+      <div class="item green">green 8</div>
+      <div class="item blue">blue 9</div>
+      <div class="item"</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 500px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        /* 
+        justify-content
+          flex-start(默认值)：与 main start 对齐
+          flex-end：与 main end 对齐
+          center：居中对齐
+          space-between: 边缘没缝隙
+
+          - flex items 之间的距离相等
+          - 与 main start、main end 两端对齐
+
+          space-evenly: 间隙都相等
+
+          - flex items 之间的距离相等
+          - flex items 与 main start、main end 之间的距离 等于 flex items 之间的距离
+
+          space-around: 边缘间隙小
+
+          - flex items 之间的距离相等
+          - flex items 与 main start、main end 之间的距离 是 flex items 之间距离的一半
+         */
+        justify-content: flex-start;
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-around; */
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        color: white;
+        line-height: 100px;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+    </div>
+  </body>
+</html>

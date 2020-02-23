@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-shrink 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 550px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+      }
+      .item {
+        width: 250px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      /* 
+        三个盒子 750 
+        父盒子 550 
+        多了 750 - 550 = 200px 
+        每个收缩 200 / 3 = 66.66666
+        不写值得话 每个收缩这么多 变成 183.3333333
+      */
+      .red {
+        background-color: #f00;
+        flex-shrink: 1;
+        flex-shrink: 2;
+        flex-shrink: 0.2;
+      }
+      .green {
+        background-color: #0f0;
+        flex-shrink: 1;
+        flex-shrink: 2;
+        flex-shrink: 0.2;
+      }
+      .blue {
+        background-color: #00f;
+        flex-shrink: 1;
+        flex-shrink: 1;
+        flex-shrink: 0.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red 1</div>
+      <div class="item green">green 2</div>
+      <div class="item blue">blue 3</div>
+    </div>
+  </body>
+</html>

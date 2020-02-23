@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-self 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 550px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        align-items: center;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+      }
+      /*
+       align-self 用的也不多
+        - flex items 可以通过 align-self 覆盖 flex contaienr 设置的 align-items
+          - auto（默认值）：遵从 flex-container 的 align-items 设置
+          - stretch、flex-start、flex-end、center、baseline， 效果跟 align-items 一致
+      */
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+        height: 150px;
+      }
+      .blue {
+        background-color: #00f;
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red 1</div>
+      <div class="item green">green 2</div>
+      <div class="item blue">blue 3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-derection 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 500px;
+        height: 400px;
+        background-color: #3498db;
+        /* 
+          开启flex布局之后，我不管你以前是什么元素，你怎么排列
+          现在我flex是老大我说了算
+         */
+        display: flex;
+        /* 
+          flex-derecion 
+            默认情况下 flex items 默认都是沿着 main axis（主轴） 从 main start 开始往 main end 方向排布
+          决定主轴方向
+          - row (默认值) 主轴从左到右
+          - row-reverse 主轴从右到左
+          - column  主轴从上到下
+          - column-reverse 主轴从下到上
+         */
+        flex-direction: column-reverse;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        color: white;
+        line-height: 100px;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+    </div>
+  </body>
+</html>

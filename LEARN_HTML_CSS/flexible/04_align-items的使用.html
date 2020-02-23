@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-items 的使用</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 500px;
+        height: 400px;
+        background-color: #3498db;
+        display: flex;
+        /* 
+        align-items
+          决定了 flex items 在 cross axis（交叉轴） 上的对齐方式
+          normal：在弹性布局中，效果和 stretch 一样
+          stretch：当 flex items 在 cross axis 方向的 size 为 auto 时，会自动拉伸至填充 flex container
+          flex-start：与 cross start 对齐
+          flex-end：与 cross end 对齐
+          center：居中对齐
+          baseline：与基准线对齐
+         */
+        align-items: normal;
+        align-items: stretch;
+        align-items: auto;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+        /* 这里的基线永远是第一个元素里面 第一个单词的基线 */
+        align-items: baseline;
+      }
+      .item {
+        width: 100px;
+        /* 
+          在 flex 布局里面的子元素
+          不设置高度的话 默认和 父元素 高度相同 及
+          align-items normal
+        */
+        height: 100px;
+        color: white;
+        text-align: center;
+      }
+      .red {
+        background-color: #f00;
+        height: 60px;
+        font-size: 50px;
+      }
+      .green {
+        background-color: #0f0;
+        height: 150px;
+      }
+      .blue {
+        background-color: #00f;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item red">red red</div>
+      <div class="item green">green</div>
+      <div class="item blue">blue</div>
+    </div>
+  </body>
+</html>
